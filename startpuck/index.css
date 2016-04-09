@@ -2,31 +2,107 @@ body {
 	margin: 0 auto;
 }
 
+h1 , h2 , h3 , h4 , h5 , h6 , p , ul , li {
+	color: #000;
+}
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+h4 {
+	font-size: 1.375rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p , li {
+	font-size: 1.1rem;
+	line-height: 1.75;
+}
+
+p , ul {
+	margin: 0 0 1.6em 0;
+}
+
+
 .navigation {
 
+	display: block;
+	overflow: hidden;
+    z-index: 100;
+
+    width: 100%;
+    height: 60px;
+    
+    background: #fff;
+    box-shadow: 0 1px 15px rgba(0,0,0,0.1);
+    
 }
 
 .navigation_pad {
+
+	padding: 15px 20px;
+
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .logo_link {
 
+	padding: 10px 20px 10px 20px;
+	border: 1px solid #000;
+
+	position: relative;
+	float: left;
+
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+
 }
 
 .navigation_ul {
-
+	float: right;
 }
 
-.wrapper {
+.navigation_ul li {
+	display: inline;
+	padding-right: 25px;
 
+}
+.wrapper {
+	text-align: center;
 }
 
 .wrapper_pad {
 
 }
 
-.foot {
+#welcome_h1 {
+	padding: 30px 0px 0px 0px;
+}
 
+.foot {
+	margin-top: 20px;
+
+	background: #d3d3d3;
+
+	padding: 120px 0px 30px 0px; 
+	text-align: center;
 }
 

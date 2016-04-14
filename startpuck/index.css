@@ -1,4 +1,12 @@
 body {
+
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 300;
+
+	background: #E8EDF1;
+
 	margin: 0 auto;
 }
 
@@ -64,7 +72,7 @@ p , ul {
 
 .logo_link {
 
-	padding: 10px 20px 10px 20px;
+	padding: 5px 20px 5px 20px;
 	border: 1px solid #000;
 
 	position: relative;
@@ -95,6 +103,34 @@ p , ul {
 
 #welcome_h1 {
 	padding: 30px 0px 0px 0px;
+}
+
+.container {
+	margin-top: 20px;
+	float: none;
+}
+
+.container_pad {
+	padding: 15px 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block {
+	display: inline-block;
+	width: 100%;
+	max-width: 320px;
+	height: 200px;
+	margin: 0px 5px 10px 5px;
+	
+	overflow: hidden;
+	background: #FFFFFF;
+	box-shadow: 0 4px 50px rgba(0,0,0,0.1);
+}
+
+.block_pad {
+
 }
 
 .foot {

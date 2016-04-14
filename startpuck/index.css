@@ -95,6 +95,7 @@ p , ul {
 }
 .wrapper {
 	text-align: center;
+	min-height: 500px;
 }
 
 .wrapper_pad {

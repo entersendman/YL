@@ -93,13 +93,18 @@ p , ul {
 	padding-right: 25px;
 
 }
+
+.navigation_ul li a {
+	text-decoration: none;
+	color: #000000;
+
+}
 .wrapper {
 	text-align: center;
 	min-height: 500px;
 }
 
 .wrapper_pad {
-
 }
 
 #welcome_h1 {
@@ -128,8 +133,13 @@ p , ul {
 	overflow: hidden;
 	background: #FFFFFF;
 	box-shadow: 0 4px 50px rgba(0,0,0,0.1);
+
+	text-align: center;
 }
 
+.block h1 {
+	font-size: 1.9em;
+}
 .block_pad {
 
 }

@@ -30,8 +30,10 @@
 }
 
 .block-text-blog_pad h2 {
-	font-size: 200%
+	font-size: 200%;
+	font-weight:300;
 }
 .block-text-blog_pad p {
-	font-size: 200%
+	font-size: 120%
+
 }

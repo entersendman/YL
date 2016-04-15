@@ -13,7 +13,7 @@
               
             </div>
             <div class="block-text-blog_pad">
-              <h2><%= post.title %></h2>
+              <h2><%= post.title.first(100) + "..." %></h2>
             <p><%= post.article.first(200) + " ..." %></p>
             <p id="author"><%= post.author %></p>
 

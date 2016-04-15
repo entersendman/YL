@@ -109,6 +109,7 @@ p , ul {
 
 #welcome_h1 {
 	padding: 30px 0px 0px 0px;
+	
 }
 
 .container {
@@ -162,8 +163,8 @@ p , ul {
 .foot {
 	margin-top: 20px;
 
-	background: #FFFFFF;
-
+	background: #3e3f40;
+	font-size: 80%;
 	padding: 120px 0px 30px 0px; 
 	text-align: center;
 }

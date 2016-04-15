@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="wrapper">
+    <div class="wrapper_pad">
+      <h1 id="welcome_h1">You are welcome on YL`s blog</h1>
+      <div class="container-blog">
+      <div class="container-blog_pad">
+
+        <% @posts.each do |post| %>
+        <div class="block-blog">
+          <div class="block-blog_pad">
+            <div class="block-blog-icon">
+              
+            </div>
+            <div class="block-text-blog_pad">
+              <h2><%= post.title %></h2>
+            <p><%= post.article.first(200) + " ..." %></p>
+            <p id="author"><%= post.author %></p>
+
+            <%= link_to 'Show', post %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+          </div>
+        </div>
+        <% end %>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+<%= link_to 'New Post', new_post_path %>

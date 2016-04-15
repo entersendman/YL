@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YL</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navigation">
+	<div class="navigation_pad">
+		<%= link_to 'YL', "/" , :class => "logo_link"  %>
+		<ul class="navigation_ul" >
+			<li><%= link_to 'Blog' , posts_path %></li>
+			<li><a href="http://www.radioroks.ua/playlist/">Music</a></li>
+			<li>Books</li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+	</div>
+</nav>
+
+<%= yield %>
+
+<footer class="foot">
+	2016  All Rights Reserved 
+</footer>
+
+</body>
+</html>

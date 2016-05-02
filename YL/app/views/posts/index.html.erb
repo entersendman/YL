@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <div class="wrapper">
-    <div class="wrapper_pad">
       <h1 id="welcome_h1">You are welcome on YL`s blog</h1>
       <div class="container-blog">
       <div class="container-blog_pad">
@@ -14,7 +13,9 @@
             </div>
             <div class="block-text-blog_pad">
 
+
               
+
 
               <h2><%= link_to post.title , post  %></h2>
             <p><%= post.article.first(200) + " ..." %></p>
@@ -30,7 +31,7 @@
 
         </div>
       </div>
-    </div>
 </div>
 
 <%= link_to 'New Post', new_post_path %>
+<%= will_paginate @posts %>

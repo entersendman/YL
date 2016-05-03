@@ -13,7 +13,7 @@
 	text-align: center;
 	width: 100%;
 	max-width: 920px;
-	height: 230px;
+	height: 180px;
 	margin: 0px 10px 15px 10px;
 	
 	overflow: hidden;
@@ -26,9 +26,11 @@
 .block-blog-icon {
 	background: #d3d3d3;
 	float: left;
-	width: 220px;
-	height: 220px;
+	width: 320px;
+	height: 180px;
+	overflow: hidden;
 }	
+
 .block-text-blog_pad {
 	text-align: left;
 	padding: 15px 30px 15px 300px;

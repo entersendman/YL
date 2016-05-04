@@ -11,9 +11,13 @@
     </div>
   <% end %>
   <div class="field">
+    <%= f.label :background_image %><br>
+    <%= f.file_field :background_image %>
+  </div>
+  <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
-  </div>
+  </div> 
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>

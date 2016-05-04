@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>YL</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +11,9 @@
 
 <nav class="navigation">
 	<div class="navigation_pad">
-		<%= link_to 'YL', "/" , :class => "logo_link"  %>
+		<%= link_to "/" do %>
+		<%= image_tag("logo.jpg",width: '35', height: '35', alt: '' , class: "image_logo_small") %>
+		<% end %>
 		<ul class="navigation_ul" >
 			<li><%= link_to 'Blog' , posts_path %></li>
 			<li><a href="http://www.radioroks.ua/playlist/">Music</a></li>

@@ -1,10 +1,9 @@
 <div class="wrapper">
 	<div class="wrapper_pad">
 		<div class="article_container">
-<p id="notice"><%= notice %></p>
+			<%= image_tag @post.image.url(:back) %>
+			<p id="notice"><%= notice %></p>
 
-
-	<%= image_tag @post.image.url(:medium) %>
   <h1><%= @post.title %></h1>
   <hr>
   <p><%=simple_format @post.article %><p>

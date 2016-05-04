@@ -16,7 +16,7 @@
               <h2><%= link_to post.title , post  %></h2>
             <p><%= post.article.first(120) + " ..." %></p>
             <p id="author"><%= post.author %></p>
-            <p><h6 style="margin:0;"><%= post.created_at.strftime("%c") %></h6></p> 
+            <p><h6 style="margin:0;"><%= post.created_at.strftime("%A,%b %d") %></h6></p> 
             <div class="clear_float"></div>
           </div>
           </div>

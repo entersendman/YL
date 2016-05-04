@@ -211,6 +211,17 @@ p , ul {
 	text-align: center;
 }
 
+.notice {
+	text-align: center;
+	padding: 1em 0px;
+	border-bottom: 1px solid #424652;
+}
+
+.alert {
+	text-align: center;
+	padding: 1em 0px;
+	border-bottom: 1px solid #424652;
+}
 
 .clear_float {
     clear:both;

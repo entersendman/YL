@@ -11,9 +11,11 @@
   <p id="author">by <%= @post.author %></p>
 
 		<p><h6><%= @post.created_at.strftime("%c") %></h6></p>
-	<%= link_to 'Edit', edit_post_path(@post), :class => "button" %> 
-    <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } , :class => "button delete_button" %> 
-	<%= link_to 'Back', posts_path , :class => "button"%>
+		<% if user_signed_in? %>
+			<%= link_to 'Edit', edit_post_path(@post), :class => "button" %> 
+   			 <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } , :class => "button delete_button" %> 
+   		<% end %>
+		<%= link_to 'Back', posts_path , :class => "button"%>
 
 	<%= render 'disqus' %>
 	</div>

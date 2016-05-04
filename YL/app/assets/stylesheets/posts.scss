@@ -57,11 +57,18 @@
 }
 
 .article_container {
-	padding: 40px 60px 50px 60px;
+	overflow: hidden;
 	background-color: #FFFFFF;
 
     box-shadow: 0 1px 15px rgba(0,0,0,0.1);
 }
+
+
+.article_container_padding {
+	padding: 40px 60px 50px 60px;
+	
+}
+
 
 .article_container h1 {
 	font-weight: 300;

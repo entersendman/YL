@@ -14929,3 +14929,1356 @@ DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` opti
   Rendered posts/_disqus.html.erb (1.4ms)
   Rendered posts/show.html.erb within layouts/application (9.5ms)
 Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:23:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  Rendered posts/show.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined local variable or method `text' for #<#<Class:0x0055678f0614d0>:0x0055678f060738>):
+     6: 			<div class="article_container_padding">
+     7:   <h1><%= @post.title %></h1>
+     8:   <hr>
+     9:   <p><%= markdown @post.article %><p>
+    10:   	<hr>
+    11:   <p id="author">by <%= @post.author %></p>
+    12: 
+  app/helpers/application_helper.rb:12:in `markdown'
+  app/views/posts/show.html.erb:9:in `_app_views_posts_show_html_erb___3827053399593236492_46951634672760'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.3ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:23:31 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (2.3ms)
+  Rendered posts/show.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 334ms (Views: 314.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/posts.self-95dfcbe5123c15b8329c1b56f3b9794f91b6fce26bccd095c2c4944b91219d78.css?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/application.self-feeda15d16e216bb1b2eeea568ccf34e0ee6ea9c09ef7c1a550067e624412fb6.css?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:23:32 +0300
+
+
+Started GET "/posts/sdfsdfsdfsdf/edit" for 127.0.0.1 at 2016-05-05 00:23:35 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (50.7ms)
+  Rendered posts/edit.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 155ms (Views: 143.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:23:51 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b8Haiou60J/16BUlIPjjIXu+qAG/OBd7tDOaVGVvxY0I15HL6+btqFBrTskI5nHnjE1YirKRL0+nUTbRb7jVLQ==", "post"=>{"title"=>"sdfsdfsdfsdf", "article"=>"sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\ndef test\r\nend\r\n```", "author"=>"sdf"}, "commit"=>"Update Post", "id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["article", "sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\ndef test\r\nend\r\n```"], ["updated_at", "2016-05-04 21:23:51.387974"], ["id", 8]]
+  [1m[36m (104.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/sdfsdfsdfsdf
+Completed 302 Found in 121ms (ActiveRecord: 105.6ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:23:51 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.3ms)
+  Rendered posts/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf/edit" for 127.0.0.1 at 2016-05-05 00:24:10 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (4.9ms)
+  Rendered posts/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:24:18 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kCczUzMQJEZzqvrNH6IDymK0Lgw0LbG6pWcLsclCzof3MXgSU0wZcdYpoSE3vJEMlUfehzmEiY62Bac0w5XeJw==", "post"=>{"title"=>"sdfsdfsdfsdf", "article"=>"sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\ndef test\r\n\r\nend\r\n```", "author"=>"sdf"}, "commit"=>"Update Post", "id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (2.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\ndef test\r\n\r\nend\r\n```"], ["updated_at", "2016-05-04 21:24:18.889200"], ["id", 8]]
+  [1m[35m (113.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/sdfsdfsdfsdf
+Completed 302 Found in 136ms (ActiveRecord: 116.1ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:24:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.9ms)
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf/edit" for 127.0.0.1 at 2016-05-05 00:24:39 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (8.0ms)
+  Rendered posts/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:24:52 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DOjo3JCAdQwPCGhuY0vv+ZMSuBOLrrkH1VEJMD0tfDFr/qOd8NxIO6qLM4JLVX0/ZOFImIYHgTPGM6W1N/pskQ==", "post"=>{"title"=>"sdfsdfsdfsdf", "article"=>"sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\nputs \"Hello World\"\r\n```", "author"=>"sdf"}, "commit"=>"Update Post", "id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["article", "sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\nputs \"Hello World\"\r\n```"], ["updated_at", "2016-05-04 21:24:52.485707"], ["id", 8]]
+  [1m[36m (93.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/sdfsdfsdfsdf
+Completed 302 Found in 125ms (ActiveRecord: 94.6ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:24:52 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.1ms)
+  Rendered posts/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf/edit" for 127.0.0.1 at 2016-05-05 00:25:54 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:26:13 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6U1LB1WmBCaMYgxK+RusHCUThq/GEkyhDOmwOEqDNqqOWwBGNfo5ESnhV6bRBT7a0uB2JMu7dJUfixy9QFQmCg==", "post"=>{"title"=>"sdfsdfsdfsdf", "article"=>"sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\nputs \"Hello World\"\r\n```\r\n\r\n~test\r\n~test2\r\n~teeeeest\r\n\r\n###Header", "author"=>"sdf"}, "commit"=>"Update Post", "id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "sdfsdfsdsssssssssssssssssssssssssssssssssssss\r\n\r\n\r\n\r\n\r\n```ruby \r\nputs \"Hello World\"\r\n```\r\n\r\n~test\r\n~test2\r\n~teeeeest\r\n\r\n###Header"], ["updated_at", "2016-05-04 21:26:13.949290"], ["id", 8]]
+  [1m[35m (125.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/sdfsdfsdfsdf
+Completed 302 Found in 150ms (ActiveRecord: 126.3ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:26:14 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.4ms)
+  Rendered posts/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.3ms)
+  Rendered posts/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 98ms (Views: 95.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/application.self-feeda15d16e216bb1b2eeea568ccf34e0ee6ea9c09ef7c1a550067e624412fb6.css?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:27:59 +0300
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:28:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.9ms)
+  Rendered posts/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/application.self-325feb2df4d50489a862fe6dab904de0eccfe29c4c1b434b51dfbd495d9cf99e.css?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:28:47 +0300
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.4ms)
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/application.self-4a50d9037dbcf53d1ff4b4d9a368c9a4d1ae9436a751c3ac60e199eb0331d9d2.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:17 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:18 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:18 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:18 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:29:18 +0300
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.9ms)
+  Rendered posts/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 90ms (Views: 82.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:29:51 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:29:52 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 00:30:06 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 00:30:08 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.2ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/a9bb7dc7-6330-4fb1-859b-355e84cdaed4" for 127.0.0.1 at 2016-05-05 00:30:09 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"a9bb7dc7-6330-4fb1-859b-355e84cdaed4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "a9bb7dc7-6330-4fb1-859b-355e84cdaed4"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_69907925652500 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.9ms)
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 00:30:20 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:30:24 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_69907925652500 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.2ms)
+  Rendered posts/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/dfg/edit" for 127.0.0.1 at 2016-05-05 00:30:26 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (5.8ms)
+  Rendered posts/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:30:52 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jO6+ANnEZLoMMXFOwxdkZmunjpx6OBtYu18A/LAOOLfr+PVBuZhZjamyKqLrCfagnFR+F3eRI2yoPax5utkoFw==", "post"=>{"title"=>"dfg", "article"=>"## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n\r\n```ruby\r\nputs \"Hello\"\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n", "author"=>"dfgdfgdfg"}, "commit"=>"Update Post", "id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n\r\n```ruby\r\nputs \"Hello\"\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n"], ["updated_at", "2016-05-04 21:30:52.628784"], ["id", 3]]
+  [1m[35m (111.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/dfg
+Completed 302 Found in 128ms (ActiveRecord: 112.8ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:30:52 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__531883931914321597_46951633199600 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.0ms)
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:38:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__757200051492132624_47303039622960 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.6ms)
+  Rendered posts/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 582ms (Views: 538.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:38:54 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 00:38:58 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (4.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 00:39:00 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:39:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__757200051492132624_70037614619840 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (2.5ms)
+  Rendered posts/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__757200051492132624_47303039622960 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.9ms)
+  Rendered posts/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 79ms (Views: 55.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:39:58 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__757200051492132624_47303039622960 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.8ms)
+  Rendered posts/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 71ms (Views: 50.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:44:14 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__757200051492132624_47303039622960 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.7ms)
+  Rendered posts/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:44:19 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:44:20 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:45:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.7ms)
+  Rendered posts/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 388ms (Views: 344.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:45:14 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (6.8ms)
+  Rendered posts/show.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 98ms (Views: 83.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:46:21 +0300
+
+
+Started GET "/posts/dfg/edit" for 127.0.0.1 at 2016-05-05 00:46:23 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (30.9ms)
+  Rendered posts/edit.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 84ms (Views: 76.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:46:41 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vD6uysgi/e/TOL6igoo7GD6YMYeLc63zOYCyYh8wbhfbKOWLqH7A2Ha75U6qlKneyWvBDIbalccq4h7nFed+tw==", "post"=>{"title"=>"dfg", "article"=>"## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n", "author"=>"dfgdfgdfg"}, "commit"=>"Update Post", "id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n"], ["updated_at", "2016-05-04 21:46:41.770786"], ["id", 3]]
+  [1m[35m (108.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/dfg
+Completed 302 Found in 122ms (ActiveRecord: 109.7ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:46:41 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.2ms)
+  Rendered posts/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.2ms)
+  Rendered posts/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 90ms (Views: 66.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:48:07 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.0ms)
+  Rendered posts/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:48:11 +0300
+
+
+Started GET "/posts/dfg/edit" for 127.0.0.1 at 2016-05-05 00:48:33 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/edit.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 74ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:48:48 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rE0oQs2xI8KBh0bicNwhvnthku5NM0axYy+8r18Rob3LW2MDre0e9SQEHQ5YwrN4jJJiZUCafoVwTRAqVcaxHQ==", "post"=>{"title"=>"dfg", "article"=>"## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n{% highlight ruby %}\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n{% endhighlight %}\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n", "author"=>"dfgdfgdfg"}, "commit"=>"Update Post", "id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["article", "## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it?\r\n{% highlight ruby %}\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n{% endhighlight %}\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n"], ["updated_at", "2016-05-04 21:48:48.824293"], ["id", 3]]
+  [1m[36m (157.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/dfg
+Completed 302 Found in 175ms (ActiveRecord: 158.6ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:48:49 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.8ms)
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/dfg/edit" for 127.0.0.1 at 2016-05-05 00:48:55 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (25.2ms)
+  Rendered posts/edit.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 108ms (Views: 101.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:49:04 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUSpbQzLZqnXB7rqjqFKR/I0BubXDMOtzu7qAwKJjB3KUuIsbJdbnnKE4Qamv9iBBcf2bdql+5ndjEaGCF6cvQ==", "post"=>{"title"=>"dfg", "article"=>"## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n", "author"=>"dfgdfgdfg"}, "commit"=>"Update Post", "id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n"], ["updated_at", "2016-05-04 21:49:04.372065"], ["id", 3]]
+  [1m[35m (115.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/dfg
+Completed 302 Found in 145ms (ActiveRecord: 117.6ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:49:04 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.8ms)
+  Rendered posts/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/dfg/edit" for 127.0.0.1 at 2016-05-05 00:49:09 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (6.5ms)
+  Rendered posts/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:49:16 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLetx4EReiJf8CTbDiOYZnQ1eXnG7b3vYQHmYSuYHZYXoeaG4U1HFfpzfzcmPQqgg8aJ8stEhdtyY0rkIU8NNg==", "post"=>{"title"=>"dfg", "article"=>"## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it\r\n\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n", "author"=>"dfgdfgdfg"}, "commit"=>"Update Post", "id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["article", "## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it\r\n\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n"], ["updated_at", "2016-05-04 21:49:16.386863"], ["id", 3]]
+  [1m[36m (120.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/dfg
+Completed 302 Found in 140ms (ActiveRecord: 121.8ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:49:16 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.3ms)
+  Rendered posts/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.2ms)
+  Rendered posts/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 153ms (Views: 147.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/syntax.self-9e10701728bdf03aef4f2b320774736b702bd37e9f413c993dc2e0ca734b7bfc.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/rouge.self-e457362993e9d462cf54633d7e318b0df88285e7f1f74d8efd4e6da0047b17f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:50:46 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:54:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.1ms)
+  Rendered posts/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 78ms (Views: 73.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/rouge.self-03da1339a1e1cbf7c41490a4e5ae4093251d6fbb41db22895f188db8280c02f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:54:04 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.7ms)
+  Rendered posts/show.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 91ms (Views: 64.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/rouge.self-03da1339a1e1cbf7c41490a4e5ae4093251d6fbb41db22895f188db8280c02f5.css?body=1" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:55:28 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:56:07 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (0.9ms)
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 78ms (Views: 73.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:56:08 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:58:02 +0300
+
+ActionController::RoutingError (undefined local variable or method `source' for ApplicationHelper::HTML:Class):
+  app/helpers/application_helper.rb:14:in `<class:HTML>'
+  app/helpers/application_helper.rb:9:in `<module:ApplicationHelper>'
+  app/helpers/application_helper.rb:3:in `<top (required)>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.8ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.0ms)
+  Rendered posts/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 138ms (Views: 112.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:59:18 +0300
+
+
+Started GET "/posts/dfg/edit" for 127.0.0.1 at 2016-05-05 00:59:23 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (5.7ms)
+  Rendered posts/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 74ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:59:54 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIUMynhIz8cUbvw82DvNfwrs2S1KgkPRHSxtFXag5/pTk0eLGBTy8LHtp9DwJV+5/R8ppkcre+UOTsGQfHf3Wg==", "post"=>{"title"=>"dfg", "article"=>"## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it\r\n\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\n```ruby\r\ndef markdown(content)\r\n    @markdown ||= Redcarpet::Markdown.new(HTML, {\r\n      autolink:            true,\r\n      space_after_headers: true,\r\n      fenced_code_blocks:  true,\r\n      superscript:         true,\r\n      underline:           true,\r\n      highlight:           true,\r\n      footnotes:           true,\r\n      quote:               true,\r\n      tables:              true\r\n    })\r\n    @markdown.render(content).html_safe\r\n  end\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n", "author"=>"dfgdfgdfg"}, "commit"=>"Update Post", "id"=>"dfg"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "## Hello\r\ndfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nWhy do we use it\r\n\r\n```html\r\n<h1> hello world </h1>\r\n```\r\n\r\n```ruby\r\ndef markdown(content)\r\n    @markdown ||= Redcarpet::Markdown.new(HTML, {\r\n      autolink:            true,\r\n      space_after_headers: true,\r\n      fenced_code_blocks:  true,\r\n      superscript:         true,\r\n      underline:           true,\r\n      highlight:           true,\r\n      footnotes:           true,\r\n      quote:               true,\r\n      tables:              true\r\n    })\r\n    @markdown.render(content).html_safe\r\n  end\r\n```\r\n\r\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n"], ["updated_at", "2016-05-04 21:59:54.877110"], ["id", 3]]
+  [1m[35m (156.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/dfg
+Completed 302 Found in 168ms (ActiveRecord: 158.4ms)
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:59:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___829250535611974263_47190407784860 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.7ms)
+  Rendered posts/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.3ms)

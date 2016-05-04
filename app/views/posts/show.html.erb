@@ -6,7 +6,9 @@
 			<div class="article_container_padding">
   <h1><%= @post.title %></h1>
   <hr>
-  <p><%=simple_format @post.article %><p>
+  <div class="show_article">
+  <%= markdown @post.article %>
+  </div>
   	<hr>
   <p id="author">by <%= @post.author %></p>
 

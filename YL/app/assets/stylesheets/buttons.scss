@@ -3,8 +3,11 @@ $light: #9a9da4;
 $blue: #8bc6db;
 $white: #FFFFFF;
 $border: #E9E9E9;
+$l-dark: #2f4f4f;
+$dis-dark: #6d8383;
 
 input[type="text"],input[type="file"],input[type="email"],input[type="password"], textarea {
+	background: #eaeded;
 	width: 90%;
 	max-width: 90%;
 	height: 2.5em;
@@ -39,4 +42,42 @@ input[type="submit"] , .button
 	&:hover {
  		color: $dark;
  	}
+}
+
+.pagination:before,
+.pagination:after {
+	content: " ";
+	display: table;
+}
+.pagination:after {
+	clear: box;
+}
+.pagination {
+	text-align: center;
+	margin: 0 0 3em 0;
+	a, .previous_page , .current , .next_page {
+		padding: 0.75em 1rem;
+		margin: 0 0.25em;
+		border-radius: 0.15em;
+		line-height: 20px;
+		text-decoration: none;
+		background: $dark;
+		font-weight: 700;
+		font-size: 0.7em;
+		font-style: normal;
+		color: $white;
+		&:hover {
+			background: $l-dark;
+		}
+
+	}
+	.current {
+		background: $l-dark;
+	}
+	.disabled {
+		color: #C0C0C0;
+		&:hover {
+			background: $dis-dark;
+		}
+	}
 }

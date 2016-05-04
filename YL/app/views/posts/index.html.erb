@@ -25,7 +25,10 @@
 
         </div>
       </div>
+      <%= link_to 'New Post', new_post_path , :class => "button" %>
+      <br>
+      <br>
+      <%= will_paginate @posts %>
 </div>
 
-<%= link_to 'New Post', new_post_path %>
-<%= will_paginate @posts %>
+

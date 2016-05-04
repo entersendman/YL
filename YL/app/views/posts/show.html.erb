@@ -13,6 +13,8 @@
 		<p><h6><%= @post.created_at.strftime("%c") %></h6></p> 
 	<%= link_to 'Edit', edit_post_path(@post) %> 
 	<%= link_to 'Back', posts_path %>
+
+	<%= render 'disqus' %>
 	</div>
  </div>
 </div>

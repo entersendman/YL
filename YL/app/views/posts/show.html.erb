@@ -1,25 +1,19 @@
 <div class="wrapper">
-
 	<div class="wrapper_pad">
-
 		<div class="article_container">
-			<%= image_tag @post.image.url(:back) %>
-			<div class="article_container_padding">	
-			<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 
-	
- 			<h1><%= @post.title %></h1>
-  			<hr>
-			<p><%=simple_format @post.article %><p>
-  			<hr>
- 			<p id="author">by <%= @post.author %></p>
+	<%= image_tag @post.image.url(:medium) %>
+  <h1><%= @post.title %></h1>
+  <hr>
+  <p><%=simple_format @post.article %><p>
+  	<hr>
+  <p id="author">by <%= @post.author %></p>
 
-<p><h6><%= @post.created_at.strftime("%c") %></h6></p> 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-</div>
-
-
+		<p><h6><%= @post.created_at.strftime("%c") %></h6></p> 
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Back', posts_path %>
+	</div>
  </div>
 </div>

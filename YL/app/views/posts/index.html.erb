@@ -18,18 +18,23 @@
 
 
               <h2><%= link_to post.title , post  %></h2>
-            <p><%= post.article.first(200) + " ..." %></p>
+            <p><%= post.article.first(120) + " ..." %></p>
             <p id="author"><%= post.author %></p>
+<<<<<<< HEAD
             <p><h6 style="margin:0;"><%= post.created_at.strftime("%c") %></h6></p> 
             <%= link_to 'Show', post %>
+=======
+
+            <p><%= link_to 'Show', post %>
+>>>>>>> d66f4946e0c1525555144cb9781e70c5e3c7298b
             <%= link_to 'Edit', edit_post_path(post) %>
             <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-            
+           <h6><%= post.created_at.strftime("%c") %></h6></p>
           </div>
           </div>
         </div>
         <% end %>
-          
+
         </div>
       </div>
 </div>

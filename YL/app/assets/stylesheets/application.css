@@ -202,3 +202,7 @@ p , ul {
 	text-align: center;
 }
 
+
+.clear_float {
+    clear:both;
+}

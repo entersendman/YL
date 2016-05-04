@@ -3,6 +3,7 @@
 		<div class="article_container">
 <p id="notice"><%= notice %></p>
 
+
 	<%= image_tag @post.image.url(:medium) %>
   <h1><%= @post.title %></h1>
   <hr>
@@ -10,9 +11,9 @@
   	<hr>
   <p id="author">by <%= @post.author %></p>
 
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+		<p><h6><%= @post.created_at.strftime("%c") %></h6></p> 
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Back', posts_path %>
 	</div>
  </div>
 </div>

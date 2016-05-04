@@ -3,5 +3,8 @@ class Post < ActiveRecord::Base
   	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   	has_attached_file :background_image, styles:{ large: "100x100>", thumb: "320*180>" , back: "1000x200#"}
   	validates_attachment_content_type :background_image, content_type: /\Aimage\/.*\Z/
+
+  	extend FriendlyId
+ 	friendly_id :title, use: :slugged
   	
 end

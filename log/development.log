@@ -14576,3 +14576,356 @@ Processing by PostsController#index as HTML
   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (9.0ms)
 Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriendlyIdSlugs (20160504205741)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160504205741"]]
+  [1m[35m (128.5ms)[0m  commit transaction
+Migrating to AddSlugToPosts (20160504205846)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "posts" ADD "slug" varchar
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "index_posts_on_slug" ON "posts" ("slug")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504205846"]]
+  [1m[36m (139.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_slug' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1000[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPost Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "posts" WHERE ("posts"."id" != 3) AND "posts"."slug" = ? LIMIT 1[0m  [["slug", "dfg"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "slug" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["slug", "dfg"], ["updated_at", "2016-05-04 21:03:10.266172"], ["id", 3]]
+  [1m[36m (155.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "slug" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["slug", "a9bb7dc7-6330-4fb1-859b-355e84cdaed4"], ["updated_at", "2016-05-04 21:03:10.428035"], ["id", 5]]
+  [1m[35m (154.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "slug" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["slug", "c227def6-e065-47ec-b453-0f138d666192"], ["updated_at", "2016-05-04 21:03:10.590015"], ["id", 6]]
+  [1m[36m (147.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "slug" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["slug", "7160132a-44c3-41f9-9c85-e5761187b49f"], ["updated_at", "2016-05-04 21:03:10.745174"], ["id", 7]]
+  [1m[35m (126.7ms)[0m  commit transaction
+
+
+Started GET "/posts?page=1" for 127.0.0.1 at 2016-05-05 00:03:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 365ms (Views: 343.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/posts.self-95dfcbe5123c15b8329c1b56f3b9794f91b6fce26bccd095c2c4944b91219d78.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/application.self-feeda15d16e216bb1b2eeea568ccf34e0ee6ea9c09ef7c1a550067e624412fb6.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:03:54 +0300
+
+
+Started GET "/posts?page=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/posts.self-95dfcbe5123c15b8329c1b56f3b9794f91b6fce26bccd095c2c4944b91219d78.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/application.self-feeda15d16e216bb1b2eeea568ccf34e0ee6ea9c09ef7c1a550067e624412fb6.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 00:03:56 +0300
+
+
+Started GET "/posts/dfg" for 127.0.0.1 at 2016-05-05 00:03:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"dfg"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "dfg"]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__1409988299154788952_69819970857320 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (2.2ms)
+  Rendered posts/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 68ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-05-05 00:04:20 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 92ms (Views: 59.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-05-05 00:04:28 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8y6bZK0/B0yjHVI+7i4VTpTgjHRrV4A+Frh0edsQeYlribihi3EV6WEP9nJOOuYdSkND73OjBYLRgTXWZs0nUQ==", "user"=>{"email"=>"rozenvil13@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "rozenvil13@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-05-04 20:50:39.201692"], ["current_sign_in_at", "2016-05-04 21:04:28.497582"], ["sign_in_count", 4], ["updated_at", "2016-05-04 21:04:28.498829"], ["id", 1]]
+  [1m[35m (152.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 319ms (ActiveRecord: 153.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 00:04:28 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 00:04:32 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2016-05-05 00:04:34 +0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (18.7ms)
+  Rendered posts/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 97ms (Views: 94.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2016-05-05 00:04:50 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7/89fJHt43tTLZG1AR8jKRflUoV85NxFfY4MXERtWAKI6XY98bHeTPauylkpAbHv4BaiDnFN5HFu7KDZTrpIog==", "post"=>{"background_image"=>#<ActionDispatch::Http::UploadedFile:0x007f0075fc8470 @tempfile=#<Tempfile:/tmp/RackMultipart20160505-11374-1ol28c5.png>, @original_filename="Зняток екрану з 2016-05-04 16-17-53.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[background_image]\"; filename=\"\xD0\x97\xD0\xBD\xD1\x8F\xD1\x82\xD0\xBE\xD0\xBA \xD0\xB5\xD0\xBA\xD1\x80\xD0\xB0\xD0\xBD\xD1\x83 \xD0\xB7 2016-05-04 16-17-53.png\"\r\nContent-Type: image/png\r\n">, "image"=>#<ActionDispatch::Http::UploadedFile:0x007f0075fc8420 @tempfile=#<Tempfile:/tmp/RackMultipart20160505-11374-xqcb3g.png>, @original_filename="Зняток екрану з 2016-05-04 21-32-21.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"\xD0\x97\xD0\xBD\xD1\x8F\xD1\x82\xD0\xBE\xD0\xBA \xD0\xB5\xD0\xBA\xD1\x80\xD0\xB0\xD0\xBD\xD1\x83 \xD0\xB7 2016-05-04 21-32-21.png\"\r\nContent-Type: image/png\r\n">, "title"=>"sdfsdfsdfsdf", "article"=>"sdfsdfsdsssssssssssssssssssssssssssssssssssss", "author"=>"sdf"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Command :: file -b --mime '/tmp/2fc1d9627bb40ea1498c625437a9a42d20160505-11374-nwkmvi.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]'
+Command :: convert '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]' -auto-orient -resize "100x100>" '/tmp/35c4f3e50bc1d56faa0280418154bb0720160505-11374-17dlb35'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]'
+Command :: convert '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]' -auto-orient -resize "320" '/tmp/35c4f3e50bc1d56faa0280418154bb0720160505-11374-199ukaz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]'
+Command :: convert '/tmp/956b807d24a3f8f3e93b077e214f0a0420160505-11374-ki9ow5.png[0]' -auto-orient -resize "1000x" -crop "1000x200+0+181" +repage '/tmp/35c4f3e50bc1d56faa0280418154bb0720160505-11374-12y34fl'
+Command :: file -b --mime '/tmp/21f41c4100049744c7c863be26342a7b20160505-11374-8qrz4v.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]'
+Command :: convert '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]' -auto-orient -resize "100x100>" '/tmp/ba3990c394294ef6479ce19ff113033920160505-11374-10k9jb8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]'
+Command :: convert '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]' -auto-orient -resize "320" '/tmp/ba3990c394294ef6479ce19ff113033920160505-11374-kxvd1v'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]'
+Command :: convert '/tmp/3877fc14dae81c461a9a20d02354e17e20160505-11374-1nsb4rw.png[0]' -auto-orient -resize "1000x" -crop "1000x200+0+181" +repage '/tmp/ba3990c394294ef6479ce19ff113033920160505-11374-4svvec'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPost Exists (0.2ms)[0m  SELECT  1 AS one FROM "posts" WHERE ("posts"."id" IS NOT NULL) AND "posts"."slug" = ? LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+Command :: file -b --mime '/tmp/2fc1d9627bb40ea1498c625437a9a42d20160505-11374-1dxz0by.png'
+Command :: file -b --mime '/tmp/21f41c4100049744c7c863be26342a7b20160505-11374-1jwokbc.png'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "article", "author", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "background_image_file_name", "background_image_content_type", "background_image_file_size", "background_image_updated_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "sdfsdfsdfsdf"], ["article", "sdfsdfsdsssssssssssssssssssssssssssssssssssss"], ["author", "sdf"], ["image_file_name", "Зняток_екрану_з_2016-05-04_21-32-21.png"], ["image_content_type", "image/png"], ["image_file_size", 193832], ["image_updated_at", "2016-05-04 21:04:50.975867"], ["background_image_file_name", "Зняток_екрану_з_2016-05-04_16-17-53.png"], ["background_image_content_type", "image/png"], ["background_image_file_size", 161126], ["background_image_updated_at", "2016-05-04 21:04:52.009223"], ["slug", "sdfsdfsdfsdf"], ["created_at", "2016-05-04 21:04:52.766780"], ["updated_at", "2016-05-04 21:04:52.766780"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/sdfsdfsdfsdf
+Completed 302 Found in 1964ms (ActiveRecord: 125.9ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:04:52 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "sdfsdfsdfsdf"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__1409988299154788952_69819976191300 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (3.2ms)
+  Rendered posts/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 00:05:00 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts?page=2" for 127.0.0.1 at 2016-05-05 00:05:02 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 3
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/sdfsdfsdfsdf" for 127.0.0.1 at 2016-05-05 00:05:09 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"sdfsdfsdfsdf"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "sdfsdfsdfsdf"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__1409988299154788952_69819970857320 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.4ms)
+  Rendered posts/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.5ms)

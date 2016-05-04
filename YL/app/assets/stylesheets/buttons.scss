@@ -1,0 +1,42 @@
+$dark: #424652;
+$light: #9a9da4;
+$blue: #8bc6db;
+$white: #FFFFFF;
+$border: #E9E9E9;
+
+input[type="text"],input[type="file"],input[type="email"],input[type="password"], textarea {
+	width: 90%;
+	max-width: 90%;
+	height: 2.5em;
+	border: 2px solid $border;
+	padding: 1em;
+	margin: 0.5em 0 2em 0;
+}
+textarea {
+	min-height: 20em;
+	min-width: 90%;
+}
+input[type="submit"] , .button
+{
+	background-color: #2F4F4F; 
+	border-radius: 3px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+ 	&:hover {
+ 		color: $light;
+ 	}
+}
+
+.delete_button {
+	background-color: #7f0000;
+	&:hover {
+ 		color: $dark;
+ 	}
+}

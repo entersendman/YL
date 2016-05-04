@@ -17,9 +17,6 @@
             <p><%= post.article.first(120) + " ..." %></p>
             <p id="author"><%= post.author %></p>
             <p><h6 style="margin:0;"><%= post.created_at.strftime("%c") %></h6></p> 
-            <%= link_to 'Show', post %>
-            <%= link_to 'Edit', edit_post_path(post) %>
-            <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
             <div class="clear_float"></div>
           </div>
           </div>

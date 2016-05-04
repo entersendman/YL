@@ -18,4 +18,4 @@
 
 /mailers
 /app/assets/images
-/public/system
+/public/system/*

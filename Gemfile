@@ -15,7 +15,7 @@ gem 'thor'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 #RL gems
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'friendly_id', '~> 5.1'
@@ -42,4 +42,3 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-gem 'puma'

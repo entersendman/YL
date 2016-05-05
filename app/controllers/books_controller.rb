@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy , :download]
 
   # GET /books
   # GET /books.json
@@ -7,6 +7,16 @@ class BooksController < ApplicationController
     @books = Book.all
     
   end
+
+
+  def download
+  @book= Book.find(params[:id])
+
+  send_file @book.document.path,
+              :filename => @book.document_file_name,
+              :type => @book.document_content_type,
+              :disposition => 'attachment'
+end
 
   # GET /books/1
   # GET /books/1.json
@@ -29,7 +39,7 @@ class BooksController < ApplicationController
     @book.document = params[:book][:document]
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.html { redirect_to books_url, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new }
@@ -43,7 +53,7 @@ class BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html { redirect_to @book, notice: 'Book was successfully updated.' }
+        format.html { redirect_to books_url, notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
         @book.document = params[:book][:document]
       else

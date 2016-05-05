@@ -1,27 +1,26 @@
-<p id="notice"><%= notice %></p>
 <div class="wrapper">
+  <div class="wrapper_pad">
   <h1 id="welcome_h1">You are welcome on our library</h1>
   
-      <div class="container-book_pad">
-
-
-
-  
+    <div class="article_container">
+      <div class="article_container_padding">
     <% @books.each do |book| %>
      
-        <h3><%= book.name %></h3>
-        <td><%= book.document_file_name %></td>
+        <div class="book_name_for_download"><%= book.name %></div>
 
         <%= button_to 'Download', download_path(book.id) %>
-        <td><%= link_to 'Edit', edit_book_path(book) %>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_book_path(book) , :class => "button"%>
+        <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } , :class => "button delete_button" %>
+        <% end %>
       <hr>
     <% end %>
- 
-
-<br>
+  </div>
+      </div>
+      <% if user_signed_in? %>
+      <%= link_to 'Add book', new_book_path , :class => "button" %>
+      <% end %>
+      <br>
+      <br>
+      <%= will_paginate @posts %>
 </div>
-
-<%= link_to 'New Book', new_book_path, :class =>"button" %>
-</div>
-<%= will_paginate @books %>

@@ -13,11 +13,11 @@
  *= require_tree .
  *= require_self
  */
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,300italic,400italic&subset=latin,cyrillic);
 
 body {
 
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
 	font-weight: 300;
@@ -38,7 +38,7 @@ a:hover {
 }
 
 h1 , h2 , h3 , h4 , h5 , h6 , p , ul , li {
-	font-weight: 500;
+	font-weight: 300;
 	color: #000;
 }
 h1 {

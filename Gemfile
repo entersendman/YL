@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -32,7 +32,7 @@ gem 'babosa', '~> 1.0', '>= 1.0.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate','~> 3.0.5'
-  gem "paperclip", "~> 5.0.0.beta1"
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 # Use Unicorn as the app server
@@ -57,9 +57,10 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+gem 'pg', '~> 0.18.4'
 
 group :production do
-  gem 'pg'
+ 
   gem 'rails_12factor'
 end
 

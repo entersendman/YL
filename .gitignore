@@ -19,3 +19,4 @@
 /mailers
 /app/assets/images
 /public/system/*
+/log/*

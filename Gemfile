@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.1'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'rouge'
 gem 'babosa', '~> 1.0', '>= 1.0.2'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

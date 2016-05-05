@@ -5736,3 +5736,55 @@ Processing by BooksController#download as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
 Sent file /home/hind/Документи/YL/public/system/books/documents/000/000/001/original/Levitsky_Osnovu_RE_pidruchnuk_2007.pdf (0.3ms)
 Completed 200 OK in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 17:37:01 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (261.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 351ms (Views: 338.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 17:37:04 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 130ms (Views: 105.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 17:37:10 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 124ms (Views: 118.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/books/1" for 127.0.0.1 at 2016-05-05 17:37:12 +0300
+Processing by BooksController#download as HTML
+  Parameters: {"authenticity_token"=>"ekvJ/rR8/ao6MiZx/xogDmQDOK4C9W+KSJTZ89vj2GoiuZVjxXnqJPTdmXtyOv2lhz+gm9HQHfenQfS4K/kzgQ==", "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Sent file /home/hind/Документи/YL/public/system/books/documents/000/000/001/original/Levitsky_Osnovu_RE_pidruchnuk_2007.pdf (0.2ms)
+Completed 200 OK in 8ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/books/1" for 127.0.0.1 at 2016-05-05 17:37:17 +0300
+Processing by BooksController#download as HTML
+  Parameters: {"authenticity_token"=>"ekvJ/rR8/ao6MiZx/xogDmQDOK4C9W+KSJTZ89vj2GoiuZVjxXnqJPTdmXtyOv2lhz+gm9HQHfenQfS4K/kzgQ==", "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Sent file /home/hind/Документи/YL/public/system/books/documents/000/000/001/original/Levitsky_Osnovu_RE_pidruchnuk_2007.pdf (0.2ms)
+Completed 200 OK in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2016-05-05 17:37:22 +0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 132ms (Views: 127.7ms | ActiveRecord: 0.3ms)

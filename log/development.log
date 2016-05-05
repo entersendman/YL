@@ -369,6 +369,7 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.8ms)
 
 
+<<<<<<< HEAD
 Started GET "/posts/8" for 127.0.0.1 at 2016-05-05 15:21:12 +0300
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"8"}
@@ -379,3 +380,469 @@ DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` opti
   Rendered posts/_disqus.html.erb (2.1ms)
   Rendered posts/show.html.erb within layouts/application (29.6ms)
 Completed 200 OK in 94ms (Views: 82.1ms | ActiveRecord: 2.3ms)
+=======
+Started GET "/" for 127.0.0.1 at 2016-05-05 14:43:51 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.8ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 15:37:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (451.4ms)
+Completed 200 OK in 611ms (Views: 599.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/" for 127.0.0.1 at 2016-05-05 15:38:04 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 90ms (Views: 77.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 15:38:30 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 62ms (Views: 49.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'guy@gmail.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "guy@gmail.com"], ["encrypted_password", "$2a$10$xMKSCHjt8kEza9rvZ3z5ZO3uYstqnZFKnHEN4YUbP8c6o5Pi/K92a"], ["created_at", "2016-05-05 12:40:24.432751"], ["updated_at", "2016-05-05 12:40:24.432751"]]
+  [1m[35m (163.3ms)[0m  commit transaction
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 15:40:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 433ms (Views: 417.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/scaffolds.self-37657db291df41ab3004a4808ea69e63cf095de65a6096a20a692bc22e64db8c.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 15:40:40 +0300
+
+
+Started GET "/books/new" for 127.0.0.1 at 2016-05-05 15:41:04 +0300
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (32.6ms)
+  Rendered books/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-05-05 15:42:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 377ms (Views: 340.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-05-05 15:43:03 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lw03y4ntJlLWYSt6g+V6LzdOxY+b5zSiIIyfWe1Ln4tiFQ/4bEkSe4IlWhlusqXqb91K5fMDATx72+uAtJjnyA==", "user"=>{"email"=>"guy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "guy@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-05-05 12:43:04.128424"], ["current_sign_in_at", "2016-05-05 12:43:04.128424"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-05-05 12:43:04.129532"], ["id", 1]]
+  [1m[36m (159.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 303ms (ActiveRecord: 160.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2016-05-05 15:43:04 +0300
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 82ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2016-05-05 15:43:17 +0300
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (4.0ms)
+  Rendered books/new.html.erb within layouts/application (39.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 117ms (Views: 96.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2016-05-05 15:43:30 +0300
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vKPIRfh5LL0cQBKvxUrTFUYN+t4rl0Z9jf596V0qYZu910m2tIVaP0otzwjW6O7ZOQ5EGqIuIhPj8Eeepbpi3Q==", "book"=>{"name"=>"WOTETOPOVOROT", "document"=>#<ActionDispatch::Http::UploadedFile:0x00557d94083718 @tempfile=#<Tempfile:/tmp/RackMultipart20160505-8511-djbts2.pdf>, @original_filename="Levitsky_Osnovu_RE_pidruchnuk_2007.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"book[document]\"; filename=\"Levitsky_Osnovu_RE_pidruchnuk_2007.pdf\"\r\nContent-Type: application/pdf\r\n">}, "commit"=>"Create Book"}
+Command :: file -b --mime '/tmp/43fcbba1a781cd49e431f6d55c577cbd20160505-8511-1ffi0ny.pdf'
+Command :: file -b --mime '/tmp/43fcbba1a781cd49e431f6d55c577cbd20160505-8511-1qgsh1i.pdf'
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/43fcbba1a781cd49e431f6d55c577cbd20160505-8511-1flcy5c.pdf'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "books" ("name", "document_file_name", "document_content_type", "document_file_size", "document_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "WOTETOPOVOROT"], ["document_file_name", "Levitsky_Osnovu_RE_pidruchnuk_2007.pdf"], ["document_content_type", "application/pdf"], ["document_file_size", 4325974], ["document_updated_at", "2016-05-05 12:43:31.011134"], ["created_at", "2016-05-05 12:43:31.042815"], ["updated_at", "2016-05-05 12:43:31.042815"]]
+  [1m[35m (594.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/2
+Completed 302 Found in 665ms (ActiveRecord: 594.5ms)
+
+
+Started GET "/books/2" for 127.0.0.1 at 2016-05-05 15:43:31 +0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template books/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/hind/Документи/YL/app/views"
+  * "/usr/local/lib/ruby/gems/2.2.0/gems/devise-3.5.9/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (33.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 15:43:35 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 15:43:56 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.5ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 101ms (Views: 97.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2016-05-05 15:43:58 +0300
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (9.1ms)
+  Rendered posts/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2016-05-05 15:44:37 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DhNNJmdh6nPAUlFfl8+GvQOZGBGJMiLYp9oTp+1NyQsPZ8zVK52c8ZY/jPiEbbtxfJqm1QCLRrbJ1CnQFd3KTQ==", "post"=>{"background_image"=>#<ActionDispatch::Http::UploadedFile:0x007fc50a488150 @tempfile=#<Tempfile:/tmp/RackMultipart20160505-8511-112jdex.png>, @original_filename="logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[background_image]\"; filename=\"logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png\"\r\nContent-Type: image/png\r\n">, "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc50a488100 @tempfile=#<Tempfile:/tmp/RackMultipart20160505-8511-145p7a4.png>, @original_filename="logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png\"\r\nContent-Type: image/png\r\n">, "title"=>"TITLE", "article"=>"SDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFf\r\n```ruby \r\nputs \"HellO\"\r\n```", "author"=>"dfg"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Command :: file -b --mime '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1skuocx.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]'
+Command :: convert '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]' -auto-orient -resize "100x100>" '/tmp/54bdb1677c8525753bcd9d918e60106b20160505-8511-1bl5hle'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]'
+Command :: convert '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]' -auto-orient -resize "320" '/tmp/54bdb1677c8525753bcd9d918e60106b20160505-8511-tvfibg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]'
+Command :: convert '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1gctval.png[0]' -auto-orient -resize "1000x" -crop "1000x200+0+400" +repage '/tmp/54bdb1677c8525753bcd9d918e60106b20160505-8511-ykfaed'
+Command :: file -b --mime '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1w7f9k1.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]'
+Command :: convert '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]' -auto-orient -resize "100x100>" '/tmp/322a08a474541224454798831e9ae02320160505-8511-arjd4x'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]'
+Command :: convert '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]' -auto-orient -resize "320" '/tmp/322a08a474541224454798831e9ae02320160505-8511-17yx0h6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]'
+Command :: convert '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-gfniix.png[0]' -auto-orient -resize "1000x" -crop "1000x200+0+400" +repage '/tmp/322a08a474541224454798831e9ae02320160505-8511-1vgol74'
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPost Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "posts" WHERE ("posts"."id" IS NOT NULL) AND "posts"."slug" = ? LIMIT 1[0m  [["slug", "title"]]
+Command :: file -b --mime '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1iz2ttm.png'
+Command :: file -b --mime '/tmp/dade53725f1a397be94d774c347e940f20160505-8511-1vr2vhx.png'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "article", "author", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "background_image_file_name", "background_image_content_type", "background_image_file_size", "background_image_updated_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["title", "TITLE"], ["article", "SDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFf\r\n```ruby \r\nputs \"HellO\"\r\n```"], ["author", "dfg"], ["image_file_name", "logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png"], ["image_content_type", "image/png"], ["image_file_size", 66822], ["image_updated_at", "2016-05-05 12:44:37.850891"], ["background_image_file_name", "logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png"], ["background_image_content_type", "image/png"], ["background_image_file_size", 66822], ["background_image_updated_at", "2016-05-05 12:44:40.818956"], ["slug", "title"], ["created_at", "2016-05-05 12:44:43.438277"], ["updated_at", "2016-05-05 12:44:43.438277"]]
+  [1m[36m (227.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/title
+Completed 302 Found in 5848ms (ActiveRecord: 227.7ms)
+
+
+Started GET "/posts/title" for 127.0.0.1 at 2016-05-05 15:44:43 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"title"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "title"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___1824706425836855880_70242128003360 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (2.0ms)
+  Rendered posts/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/title/edit" for 127.0.0.1 at 2016-05-05 15:44:52 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"title"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "title"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (5.8ms)
+  Rendered posts/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 73ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/title" for 127.0.0.1 at 2016-05-05 15:44:56 +0300
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HRAs9GL4P1Vwa234VvO3NIb8DJq6FJmCgMT/dB/ULeYcZK0HLgRJ1yYGsF9FUYr4+f+yXjOt/ezuysUD50QuoA==", "post"=>{"title"=>"TITLE", "article"=>"SDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFf\r\n\r\n```ruby \r\nputs \"HellO\"\r\n```", "author"=>"dfg"}, "commit"=>"Update Post", "id"=>"title"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "title"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "article" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["article", "SDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfSDFSDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFf\r\n\r\n```ruby \r\nputs \"HellO\"\r\n```"], ["updated_at", "2016-05-05 12:44:56.974403"], ["id", 1]]
+  [1m[35m (600.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/title
+Completed 302 Found in 612ms (ActiveRecord: 600.7ms)
+
+
+Started GET "/posts/title" for 127.0.0.1 at 2016-05-05 15:44:57 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"title"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "title"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___1824706425836855880_70242128003360 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.0ms)
+  Rendered posts/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+>>>>>>> knigi
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAttachmentDocumentToBooks (20160505090612)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (62.3ms)[0m  CREATE TEMPORARY TABLE "abooks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_file_name" varchar, "document_content_type" varchar, "document_file_size" integer, "document_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "books"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "books"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_content_type" varchar, "document_file_size" integer, "document_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "abooks"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "abooks"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "abooks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_content_type" varchar, "document_file_size" integer, "document_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "books"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "books"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_file_size" integer, "document_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "abooks"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "abooks"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "abooks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_file_size" integer, "document_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "books"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "books"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "abooks"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "abooks"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "abooks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "books"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "books"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "abooks"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "abooks"[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20160505090612"]]
+  [1m[36m (116.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_slug' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m

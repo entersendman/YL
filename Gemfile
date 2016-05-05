@@ -23,17 +23,13 @@ gem 'web-console', '~> 2.0'
 gem 'will_paginate','~> 3.0.5'
 gem "paperclip", "~> 5.0.0.beta1"
 
-group :development, :test do
-  
-  gem 'byebug'
-end
-
-group :development do
-  gem 'sqlite3'
-end
-
-group :production do 
+group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 
+group :development, :test do # <<<< :development, not devlopment
+  gem 'sqlite3'
+end
+
+gem 'puma'

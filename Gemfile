@@ -23,9 +23,9 @@ gem 'web-console', '~> 2.0'
 gem 'will_paginate','~> 3.0.5'
 gem "paperclip", "~> 5.0.0.beta1"
 
-group :development, :test do
-  gem 'sqlite3'
-end
+gem 'sqlite3', :group => [:development, :test]
+
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

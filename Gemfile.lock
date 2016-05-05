@@ -98,10 +98,15 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pdf-core (0.2.5)
     pg_search (1.0.5)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
+    prawn (1.2.1)
+      pdf-core (~> 0.2.5)
+      ttfunk (~> 1.2.0)
+    prawn-table (0.1.2)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -158,6 +163,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
+    ttfunk (1.2.2)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -186,6 +192,8 @@ DEPENDENCIES
   jquery-rails
   paperclip (~> 5.0.0.beta1)
   pg_search
+  prawn (~> 1.2.1)
+  prawn-table (~> 0.1.0)
   rails (= 4.2.4)
   redcarpet (~> 3.3, >= 3.3.4)
   rouge

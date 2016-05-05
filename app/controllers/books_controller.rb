@@ -3,10 +3,11 @@ class BooksController < ApplicationController
 
   # GET /books
   # GET /books.json
-  def index
-    @books = Book.all
+  
+   def index
+    @books = Book.paginate(:page => params[:page],per_page: 3)
+   end
     
-  end
 
 
   def download
@@ -16,7 +17,7 @@ class BooksController < ApplicationController
               :filename => @book.document_file_name,
               :type => @book.document_content_type,
               :disposition => 'attachment'
-end
+  end
 
   # GET /books/1
   # GET /books/1.json

@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
+<div class="wrapper">
+  <h1 id="welcome_h1">You are welcome on our library</h1>
+  
+      <div class="container-book_pad">
 
-<h1>Listing Books</h1>
 
 
   
@@ -12,10 +15,13 @@
         <%= button_to 'Download', download_path(book.id) %>
         <td><%= link_to 'Edit', edit_book_path(book) %>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      
+      <hr>
     <% end %>
  
 
 <br>
+</div>
 
 <%= link_to 'New Book', new_book_path %>
+</div>
+<%= will_paginate @books %>

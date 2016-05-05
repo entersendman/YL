@@ -19,7 +19,7 @@
 		<ul class="navigation_ul" >
 			<li><%= link_to 'Blog' , posts_path %></li>
 			<li><a href="http://www.radioroks.ua/playlist/">Music</a></li>
-			<li>Books</li>
+			<li><%= link_to 'Books' , books_path %></li>
 			<li><a href="about.html">About</a></li>
 			<% if user_signed_in? %>
 			<li><%= link_to  "Sign out"  , destroy_user_session_path , method: :delete %></li>

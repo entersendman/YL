@@ -28,15 +28,18 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'will_paginate','~> 3.0.5'
 gem "paperclip", "~> 5.0.0.beta1"
 
-gem 'sqlite3', '~>1.3.11' , :group => [:development, :test]
+group :development, :test do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end
+
 group :development do
-gem 'web-console', '~> 2.0'
-gem 'spring'
+  gem 'sqlite3'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
 gem 'puma'

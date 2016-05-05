@@ -1,0 +1,381 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddSlugToPosts (20160504205846)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_slug' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mDROP INDEX "index_posts_on_slug"[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "article" text, "author" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "background_image_file_name" varchar, "background_image_content_type" varchar, "background_image_file_size" integer, "background_image_updated_at" datetime, "slug" varchar) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aposts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at","slug") VALUES (3, 'dfg', '## Hello
+
+
+
+dfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
+
+<img src="http://www.w3schools.com/tags/smiley.gif" alt="Smiley face" width="42" height="42">
+
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Why do we use it
+
+```html
+<h1> hello world </h1>
+```
+Some text here
+
+```ruby
+def markdown(content)
+    @markdown ||= Redcarpet::Markdown.new(HTML, {
+      autolink:            true,
+      space_after_headers: true,
+      fenced_code_blocks:  true,
+      superscript:         true,
+      underline:           true,
+      highlight:           true,
+      footnotes:           true,
+      quote:               true,
+      tables:              true
+    })
+    @markdown.render(content).html_safe
+  end
+```
+
+```css
+body {
+
+	font-family: ''Raleway'', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 300;
+	color: #0e1717;
+
+	background: #E8EDF1;
+
+	margin: 0 auto;
+}
+```
+
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+', 'dfgdfgdfg', '2016-05-04 16:00:21.572247', '2016-05-05 10:46:28.528616', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 17:18:18.785005', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 17:18:19.073511', 'dfg')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at","slug") VALUES (5, 'вап', 'вапвап', 'вапвп', '2016-05-04 18:21:52.499690', '2016-05-04 21:03:10.428035', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 18:21:51.871322', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 18:21:52.310466', 'a9bb7dc7-6330-4fb1-859b-355e84cdaed4')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at","slug") VALUES (6, 'вапвп', '', 'вапвап', '2016-05-04 18:22:24.370413', '2016-05-04 22:48:31.752892', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 18:22:23.970175', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 18:22:24.182034', 'c227def6-e065-47ec-b453-0f138d666192')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at","slug") VALUES (7, 'вапвап', 'вапвап', 'вапвап', '2016-05-04 18:22:42.187557', '2016-05-04 21:03:10.745174', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 18:22:41.613579', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 18:22:41.905020', '7160132a-44c3-41f9-9c85-e5761187b49f')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at","slug") VALUES (8, 'sdfsdfsdfsdf', 'sdfsdfsdsssssssssssssssssssssssssssssssssssss
+
+
+
+
+```ruby 
+puts "Hello World"
+```
+
+~test
+~test2
+~teeeeest
+
+###Header', 'sdf', '2016-05-04 21:04:52.766780', '2016-05-04 21:26:13.949290', 'Зняток_екрану_з_2016-05-04_21-32-21.png', 'image/png', 193832, '2016-05-04 21:04:50.975867', 'Зняток_екрану_з_2016-05-04_16-17-53.png', 'image/png', 161126, '2016-05-04 21:04:52.009223', 'sdfsdfsdfsdf')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at","slug") VALUES (9, 'рропро', 'оррло', 'ллл', '2016-05-05 11:00:11.384638', '2016-05-05 11:00:11.384638', 'logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png', 'image/png', 66822, '2016-05-05 11:00:05.548183', 'logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png', 'image/png', 66822, '2016-05-05 11:00:08.590234', 'rropro')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "posts"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "article" text, "author" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "background_image_file_name" varchar, "background_image_content_type" varchar, "background_image_file_size" integer, "background_image_updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "aposts"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at") VALUES (3, 'dfg', '## Hello
+
+
+
+dfgdfgorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
+
+<img src="http://www.w3schools.com/tags/smiley.gif" alt="Smiley face" width="42" height="42">
+
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Why do we use it
+
+```html
+<h1> hello world </h1>
+```
+Some text here
+
+```ruby
+def markdown(content)
+    @markdown ||= Redcarpet::Markdown.new(HTML, {
+      autolink:            true,
+      space_after_headers: true,
+      fenced_code_blocks:  true,
+      superscript:         true,
+      underline:           true,
+      highlight:           true,
+      footnotes:           true,
+      quote:               true,
+      tables:              true
+    })
+    @markdown.render(content).html_safe
+  end
+```
+
+```css
+body {
+
+	font-family: ''Raleway'', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 300;
+	color: #0e1717;
+
+	background: #E8EDF1;
+
+	margin: 0 auto;
+}
+```
+
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum'' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+', 'dfgdfgdfg', '2016-05-04 16:00:21.572247', '2016-05-05 10:46:28.528616', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 17:18:18.785005', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 17:18:19.073511')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at") VALUES (5, 'вап', 'вапвап', 'вапвп', '2016-05-04 18:21:52.499690', '2016-05-04 21:03:10.428035', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 18:21:51.871322', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 18:21:52.310466')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at") VALUES (6, 'вапвп', '', 'вапвап', '2016-05-04 18:22:24.370413', '2016-05-04 22:48:31.752892', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 18:22:23.970175', 'jNhTV-bPV2U.jpg', 'image/jpeg', 18813, '2016-05-04 18:22:24.182034')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at") VALUES (7, 'вапвап', 'вапвап', 'вапвап', '2016-05-04 18:22:42.187557', '2016-05-04 21:03:10.745174', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 18:22:41.613579', 'background-1134468_960_720.jpg', 'image/jpeg', 219137, '2016-05-04 18:22:41.905020')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at") VALUES (8, 'sdfsdfsdfsdf', 'sdfsdfsdsssssssssssssssssssssssssssssssssssss
+
+
+
+
+```ruby 
+puts "Hello World"
+```
+
+~test
+~test2
+~teeeeest
+
+###Header', 'sdf', '2016-05-04 21:04:52.766780', '2016-05-04 21:26:13.949290', 'Зняток_екрану_з_2016-05-04_21-32-21.png', 'image/png', 193832, '2016-05-04 21:04:50.975867', 'Зняток_екрану_з_2016-05-04_16-17-53.png', 'image/png', 161126, '2016-05-04 21:04:52.009223')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","title","article","author","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","background_image_file_name","background_image_content_type","background_image_file_size","background_image_updated_at") VALUES (9, 'рропро', 'оррло', 'ллл', '2016-05-05 11:00:11.384638', '2016-05-05 11:00:11.384638', 'logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png', 'image/png', 66822, '2016-05-05 11:00:05.548183', 'logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg.png', 'image/png', 66822, '2016-05-05 11:00:08.590234')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aposts"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20160504205846"]]
+  [1m[36m (178.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSlugToPosts (20160504205846)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "posts" ADD "slug" varchar[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_posts_on_slug" ON "posts" ("slug")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504205846"]]
+  [1m[36m (116.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBooks (20160505080951)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160505080951"]]
+  [1m[36m (91.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddAttachmentDocumentToBooks (20160505090612)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "books" ADD "document_file_name" varchar[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "books" ADD "document_content_type" varchar
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "books" ADD "document_file_size" integer[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "books" ADD "document_updated_at" datetime
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160505090612"]]
+  [1m[35m (92.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_slug' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 15:20:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 544ms (Views: 520.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/scaffolds.self-37657db291df41ab3004a4808ea69e63cf095de65a6096a20a692bc22e64db8c.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 15:20:58 +0300
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 15:21:01 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 112ms (Views: 109.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts?page=2" for 127.0.0.1 at 2016-05-05 15:21:09 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2016-05-05 15:21:12 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "8"]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__3070224639334989028_69833740463060 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (2.1ms)
+  Rendered posts/show.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 94ms (Views: 82.1ms | ActiveRecord: 2.3ms)

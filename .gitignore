@@ -38,4 +38,3 @@ log/*
 tmp/*
 mailers*
 app/assets/images
-public/system/*

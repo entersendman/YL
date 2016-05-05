@@ -51,8 +51,6 @@ group :development do
   gem 'web-console', '~> 2.0'
   
   gem 'pg_search'
-  gem 'prawn', '~> 1.2.1'
-  gem 'prawn-table', '~> 0.1.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

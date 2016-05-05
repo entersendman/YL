@@ -17281,3 +17281,107 @@ Processing by PostsController#index as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
   Rendered posts/index.html.erb within layouts/application (14.0ms)
 Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 398ms (Views: 373.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/about.self-6e4505eea37f09a2ff22e4151fbefe056ada95c7a0e3044101b2dd6aa00fd42e.css?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/buttons.self-e18bc88cb4a8d545d84aad23287b29d8ca3af23c688079c3473286e33b051441.css?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/posts.self-d1b65a0bf65dda2225e64c97b29ecc17da684106d0113c7003e175410b1937e7.css?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/welcome.self-ae2d412c87c143af5239a3337736c068107dbbb6001d0bc7f4e86fc622027af3.css?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 14:04:38 +0300
+
+
+Started GET "/posts?page=2" for 127.0.0.1 at 2016-05-05 14:04:47 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/rropro" for 127.0.0.1 at 2016-05-05 14:04:49 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"rropro"}
+  [1m[35mPost Load (1.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "rropro"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb___4349451418213676849_69990466190620 at /home/hind/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (2.3ms)
+  Rendered posts/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 14:04:54 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 14:06:38 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/about.html" for 127.0.0.1 at 2016-05-05 14:06:42 +0300
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 14:06:45 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.8ms)

@@ -7275,3 +7275,1252 @@ Started GET "/" for 127.0.0.1 at 2016-05-05 18:54:43 +0300
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html within layouts/application (20.3ms)
 Completed 200 OK in 160ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 18:57:15 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 335ms (Views: 306.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 18:58:04 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 18:58:05 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 18:58:17 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (3.1ms)
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 18:58:19 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 109ms (Views: 97.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 18:59:26 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 18:59:27 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 18:59:28 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 18:59:29 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:00:16 +0300
+
+
+Started GET "/books/2/edit" for 127.0.0.1 at 2016-05-05 19:00:48 +0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered books/_form.html.erb (16.5ms)
+  Rendered books/edit.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 89ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/books/2" for 127.0.0.1 at 2016-05-05 19:00:56 +0300
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zbS/KCTIRLCkbmkShe0/BZNAFCBtdc1qn6Zv76lXb9cTJSC/hL/NsRyC6Fq/efdVlFn5xHalOqE/JSkTxE0Hkw==", "book"=>{"name"=>"BEKH"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "books" SET "name" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["name", "BEKH"], ["updated_at", "2016-05-05 16:00:56.560678"], ["id", 2]]
+  [1m[35m (225.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/books
+Completed 302 Found in 235ms (ActiveRecord: 226.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:00:56 +0300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2016-05-05 19:01:03 +0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered books/_form.html.erb (2.3ms)
+  Rendered books/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2016-05-05 19:01:10 +0300
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRndWRyeq9sqt//YOqvPcfrD3huEMi66jSRoEiy3xTZviELOvOki2pJbfpAAPwch/doz/5/i2XEtpy7uQa2tcg==", "book"=>{"name"=>"Levytskiy"}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "books" SET "name" = ?, "updated_at" = ? WHERE "books"."id" = ?  [["name", "Levytskiy"], ["updated_at", "2016-05-05 16:01:10.398619"], ["id", 1]]
+  [1m[36m (200.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 207ms (ActiveRecord: 201.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:01:10 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:01:22 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:01:41 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:41 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:41 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:41 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:41 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:41 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:01:42 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:01:58 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:01:59 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 99ms (Views: 97.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:02:12 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:06:02 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:06:03 +0300
+
+
+Started GET "/books?page=2" for 127.0.0.1 at 2016-05-05 19:07:06 +0300
+Processing by BooksController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 3
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books?page=1" for 127.0.0.1 at 2016-05-05 19:07:08 +0300
+Processing by BooksController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books?page=2" for 127.0.0.1 at 2016-05-05 19:07:10 +0300
+Processing by BooksController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" LIMIT 3 OFFSET 3[0m
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books?page=1" for 127.0.0.1 at 2016-05-05 19:07:11 +0300
+Processing by BooksController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:07:39 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:07:56 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.8ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:07:58 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:07:59 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:08:03 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:08:04 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:08:05 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.5ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 19:10:02 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:10:14 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 19:10:57 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 19:14:07 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2016-05-05 19:17:30 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = ?  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "6"]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+DEPRECATION WARNING: You are calling a `*_path` helper with the `only_path` option explicitly set to `false`. This option will stop working on path helpers in Rails 5. Use the corresponding `*_url` helper instead. (called from _app_views_posts__disqus_html_erb__380287307678597617_70134889141720 at /home/yaroslav/Документи/YL/app/views/posts/_disqus.html.erb:9)
+  Rendered posts/_disqus.html.erb (1.6ms)
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:17:41 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (5.7ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 19:18:46 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:19:00 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 19:19:06 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:19:11 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:19:17 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.5ms)
+Completed 200 OK in 76ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-05-05 19:19:32 +0300
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:19:36 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:19:44 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 19:19:56 +0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:21:51 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:22:59 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:23:00 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:23:20 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:23:43 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.1ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:23:44 +0300
+
+
+Started GET "/books" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" LIMIT 3 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/books.self-23494ef8e0edcfb49bfa6f4471483c8445d67550e110cf74afb7ac10ad9b3b61.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/download_pdf.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/posts.self-4545cd8597f6151c833d1ba5056f2f9b68c14f97c41ab1ccc3c10006d300e734.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/rouge.self-63e1d235a482d40d57616b7c84fe919aa2442b6f299184cbd070ae2946fb9fb2.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/buttons.self-d3ab95bb37374bce8e869afede18f77c61a2c1a552785af322a9d739c646526e.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/about.self-f22281b694d27ec997ef43228cf1e6de6e42bd8cf445ffb20a6f7687751ef93b.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/welcome.self-6c979b3427e7183795c75d65f3704ca52f489ef20162b423bac15351dbe01b3e.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/application.self-ea8ab0c0051ef6b32d842cce73fe66ae9fa70792ade640666c1ff9d8fbaf2220.css?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/download_pdf.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/logo-4b6c7d23b2c986c868ccff8f5875202d9996f0235b2849cb620473aa0bc5ea66.jpg" for 127.0.0.1 at 2016-05-05 19:24:09 +0300
+
+
+Started GET "/assets/favicon-0491169d62558d37e6242ee7006c68c868aac25c3a56cca01f4d73fba2c93bc3.ico" for 127.0.0.1 at 2016-05-05 19:24:09 +0300

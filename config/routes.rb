@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :books 
   devise_for :users
   resources :posts
+  resources :contacts, only: [:new , :create]
   
 
 match 'books/:id' => 'books#download', :as => :download , via: [:get, :post]

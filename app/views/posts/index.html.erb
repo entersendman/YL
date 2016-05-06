@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="wrapper">
       <h1 id="welcome_h1">You are welcome on YL`s blog</h1>
       <div class="container-blog">
@@ -14,9 +12,9 @@
             <div class="block-text-blog_pad">
 
               <h2><%= link_to post.title , post  %></h2>
-            <p><%= post.article.first(120) + " ..." %></p>
+            <p><%= markdown post.article.first(120) + " ..." %></p>
             <p id="author"><%= post.author %></p>
-            <p><h6 style="margin:0;"><%= post.created_at.strftime("%A,%b %d") %></h6></p> 
+            <p><h6 style="margin:0;"><%= post.created_at.strftime("%A, %b %d") %></h6></p> 
             <div class="clear_float"></div>
           </div>
           </div>

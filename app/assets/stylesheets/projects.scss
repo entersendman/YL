@@ -1,0 +1,72 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.project_block {
+	position: relative;
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+    font-style: italic;
+    border-radius: 5px;
+
+    h2 {
+        color: #FFFFFF;
+        font-size: 3em;
+    }
+
+    p {
+        color: #FFFFFF;
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        filter: blur(1px);
+}
+	&:hover {
+		
+		.backgroind_project_block , p {
+	-webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    filter: blur(0px);
+}
+
+	};
+}
+
+	
+
+.backgroind_project_block {
+	background-size: cover;
+    backgroun-repeat: no-repeat;
+
+    -webkit-transition: 1s; /* Safari */
+    transition:1s;
+
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    filter: blur(2px);
+}
+
+
+
+.backgroind_project_block ,
+.project_description {
+	position: absolute;
+    width: 600px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.project_container {
+    overflow: hidden;
+    background-color: #FFFFFF;
+
+    box-shadow: 0 1px 15px rgba(0,0,0,0.1);
+}
+
+.project_container_pad {
+    padding: 40px 60px 50px 60px;
+}

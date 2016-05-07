@@ -1,0 +1,17 @@
+<div class="wrapper">
+	<div class="wrapper_pad">
+		<div class="project_container">
+			<div class="project_container_pad">
+  			<h1><%= @project.name %></h1> 
+  			<hr>
+  			<div class="show_article"><%= markdown @project.description %> </div>
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_project_path(@project) , :class => "button"%> 
+<%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } , :class => "button delete_button"%>
+<% end %>
+<p>If you are interested in this project and want to improve them , contact with us via <%= link_to  'Contact' , new_contact_path %></p>
+<%= link_to 'Back', projects_path , :class => "button"%>
+</div>
+</div>
+</div>
+</div>

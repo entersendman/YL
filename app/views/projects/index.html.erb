@@ -1,0 +1,25 @@
+<div class="wrapper">
+
+<h1 id="welcome_h1">Our Projects</h1>
+
+	<div class="container-blog">
+      <div class="container-blog_pad">
+
+    <% @projects.each do |project| %>
+    <%= link_to project  do %> 
+    <div class="project_block" >
+    	<div class="backgroind_project_block" style="background-image: url('<%= image_path(project.view.url(:medium)) %>');"></div>
+    	<div class="project_description">
+      <h2> <%= project.name %> </h2>
+      <p><%= project.description.first(70)+ "..." %>   </p>    
+      </div>
+      </div>
+      <% end %>
+    <% end %>
+<br>
+<% if user_signed_in? %>
+<%= link_to 'New Project', new_project_path %>
+<% end %>
+</div>
+</div>
+</div>

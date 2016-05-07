@@ -3,42 +3,40 @@
 		<p>Study.Improvement.Development.</p>
 		<div class="container">
 		<div class="container_pad">
-
+<div class="row">
 			<div class="block">
 				<div class="block_pad">
-					<a href=""><h1 class="block_h1">  Study </h1></a>
-					<p class="block_p1"> some study </p>
+					<a href=""><h1 class="block_h1">  Projects </h1></a>
+					<p class="block_p1"> wait, will soon be </p>
 				</div>
 			</div>
 
 			<div class="block">
 				<div class="block_pad">
-					<a href=""><h1 class="block_h1">  Improvement </h1></a>
-					<p class="block_p1"> some improvement </p>
+					<%= link_to labs_path do %>
+					<h1 class="block_h1">  Labs </h1>
+					<% end %>
+					<p class="block_p1"> the wonderful world of physics </p>
 				</div>
 			</div>
 
 			<div class="block">
 				<div class="block_pad">
-					<a href=""><h1 class="block_h1">  Development </h1></a>
-					<p class="block_p1"> some development </p>
+					<%= link_to about_path do %>
+					<h1 class="block_h1">  About </h1>
+					<% end %>
+					<p class="block_p1"> we are selfish </p>
 				</div>
 			</div>
-
+</div>
+<div class="row">
 			<div class="block">
 				<div class="block_pad">
 					<%= link_to posts_path do %>
 					<h1 class="block_h1">  Blog </h1>
 					<% end %>
-					<p class="block_p1"> some blog </p>
+					<p class="block_p1"> how we think and see the world </p>
 					
-				</div>
-			</div>
-
-			<div class="block">
-				<div class="block_pad">
-					<a href=""><h1 class="block_h1">  Music </h1></a>
-					<p class="block_p1"> some music</p>
 				</div>
 			</div>
 
@@ -48,11 +46,20 @@
 					<%= link_to books_path do %>
 					<h1 class="block_h1">  Books </h1>
 					<% end %>
-					<p class="block_p1"> some books </p>
+					<p class="block_p1"> what we suggest readings </p>
 					
 				</div>
 			</div>
 
+			<div class="block">
+				<div class="block_pad">
+					<%= link_to new_contact_path do %>
+					<h1 class="block_h1"> Contact  </h1>
+					<% end %>
+					<p class="block_p1"> write, we are waiting </p>
+				</div>
+			</div>
+</div>
 				
 
 

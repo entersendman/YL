@@ -1,0 +1,33 @@
+<div class="wrapper">
+<div class="container-blog">
+<div class="container-blog_pad">
+<h1>Listing Labs</h1>
+
+
+    <% @labs.each do |lab| %>
+    <div class="lab_block">
+    	<div class="lab_block_pad">
+    		<div class="lab">
+        <h3><%= link_to lab.name  , lab %></h3>
+        <p><%= lab.meta %></p> 
+        	</div>
+        	<% if user_signed_in? %>
+        	<div class="lab_buttons">
+        		<ul>
+        <li><%= link_to 'Show', lab  ,:class => "button" %></li>
+        <li><%= link_to 'Edit', edit_lab_path(lab) , :class => "button" %></li>
+        <li><%= link_to 'Destroy', lab, method: :delete, data: { confirm: 'Are you sure?' } , :class => "button" %></li>
+        </ul>
+        	</div>
+        	<% end %>
+    	</div>
+    </div>
+        <% end %>
+<br>
+<% if user_signed_in? %>
+<%= link_to 'New Lab', new_lab_path , :class => "button"  %>
+<% end %>
+
+</div>
+</div>
+</div>

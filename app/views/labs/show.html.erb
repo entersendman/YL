@@ -1,0 +1,26 @@
+	<div class="wrapper">
+	<div class="wrapper_pad">
+		<div class="lab_container">
+			<div class="lab_container_padding">
+				<h1><%= @lab.name %></h1>
+				<hr>
+  					<h5><%= @lab.meta %></h5>
+  					<hr>
+  					<div class="show_lab">
+  						<%= markdown @lab.info %>
+  					</div>
+  					<% if user_signed_in? %>
+						<%= link_to 'Edit', edit_lab_path(@lab) , :class => "button" %> 
+					<% end %>
+					
+					<%= link_to 'Back', labs_path , :class => "button"%> 
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  
+
+

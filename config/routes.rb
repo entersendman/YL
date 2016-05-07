@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :labs
   resources :books 
   devise_for :users
   resources :posts

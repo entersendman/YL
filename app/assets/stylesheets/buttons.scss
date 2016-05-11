@@ -5,6 +5,7 @@ $white: #FFFFFF;
 $border: #E9E9E9;
 $l-dark: #2f4f4f;
 $dis-dark: #6d8383;
+$hover-down: #202228;
 
 input[type="text"],input[type="file"],input[type="email"],input[type="password"], textarea {
 	background: #eaeded;
@@ -43,7 +44,22 @@ input[type="submit"] , .button
  		color: $dark;
  	}
 }
+#button_download {
+	padding: 20px;
+	background: #FFF;
+	border: 2px solid $dark;
+	color: $dark;
+	&:hover {
+		color: #FFF;
+		background: $l-dark;
+	}
+}
 
+@keyframes hoverdown {
+	100% {
+		background: $dark;
+	}
+}
 .pagination:before,
 .pagination:after {
 	content: " ";

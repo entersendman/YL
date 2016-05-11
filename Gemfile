@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.1'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'rouge'
 gem 'babosa', '~> 1.0', '>= 1.0.2'
+gem 'translation_center', '~> 2.0', '>= 2.0.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate','~> 3.0.5'

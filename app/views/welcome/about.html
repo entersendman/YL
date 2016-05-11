@@ -1,29 +1,21 @@
-		<div class="wrapper">
+<div class="wrapper">
 			
-			<div class="container-about">
-			<div class="container-about_pad">
-			<div class="block-about">
-			<div class="block-about-icon">
+	<div class="container-about">
+	<div class="container-about_pad">
 
-			</div>
-				<div class="block-text-about_pad">
-						<h2>Yaroslav Yuzvenko</h2>
-						<p> Biography </p>
-			</div>
-			</div>
+		<% @users.each do |user| %>
 			<div class="block-about">
-			<div class="block-about-icon">
+				<div class="block-about-icon">
 
+				</div>
+			<div class="block-text-about_pad">
+			<h2><%= user.email %></h2>
+			<p> Biography </p>
+				</div>
 			</div>
-				<div class="block-text-about_pad">
-						<h2>Roman Ovcharov</h2>
-						<p> Biography </p>
-			</div>
-			</div>		
-			</div>					
-			
-		</div>
+	<% end %>	
 		
-
+	</div>					
+	</div>
 
 </div>

@@ -51,15 +51,11 @@ input[type="submit"] , .button
 	color: $dark;
 	&:hover {
 		color: #FFF;
-		background: $l-dark;
-	}
-}
-
-@keyframes hoverdown {
-	100% {
 		background: $dark;
 	}
 }
+
+
 .pagination:before,
 .pagination:after {
 	content: " ";

@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-  before_action :set_about, only: [:show, :edit, :update, :destroy]
+  before_action :set_about, only: [ :edit, :update, :destroy]
 
   # GET /abouts
   # GET /abouts.json
@@ -7,10 +7,7 @@ class AboutsController < ApplicationController
     @abouts = About.all
   end
 
-  # GET /abouts/1
-  # GET /abouts/1.json
-  def show
-  end
+ 
 
   # GET /abouts/new
   def new
@@ -69,6 +66,6 @@ class AboutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_params
-      params.require(:about).permit(:name, :biography)
+      params.require(:about).permit(:name, :biography, :avatar)
     end
 end

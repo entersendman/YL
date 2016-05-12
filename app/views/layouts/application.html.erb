@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
- 
+  <script data-pace-options='{ "ajax": false }' src='pace.js'></script>
 </head>
 <body>
 
@@ -30,6 +30,7 @@
 		</ul>
 	</div>
 </nav>
+
 <% if notice %>
 <p class="notice"><%= notice %></p>
 <% elsif alert %>
@@ -39,7 +40,7 @@
 <%= yield %>
 
 <footer class="foot">
-	<p style="color: #FFF;">by Roman Ovhcrov and Yaroslav Yzvenko</p>
+	<p style="color: #FFF;">by Roman Ovcharov and Yaroslav Yuzvenko</p>
 	<p>2016  All Rights Reserved </p>
 </footer>
 

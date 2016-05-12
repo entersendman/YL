@@ -15,18 +15,24 @@
 	margin: 0px 10px 15px 10px;
 	width: 100%;
 	border-radius: 5px;
-	
+	min-height: 300px;
 	
 	background: #FFFFFF;
-	bbox-shadow: 2px 1px 15px rgba(0,0,0,0.25);
+	box-shadow: 2px 1px 15px rgba(0,0,0,0.25);
 }
 .block-about-icon {
+	border-radius: 500px;
+	overflow: hidden;
 	margin: 30px 15px 15px 30px;
-	background: #d3d3d3;
+	background: #ffff66;
 	float: left;
 	width: 250px;
-	height: 230px;
+	height: 250px;
 }	
+.block-about-icon img {
+	width:  250px;
+	height: 250px;
+}
 .block-text-about_pad {
 	position: relative;
 	text-align: left;

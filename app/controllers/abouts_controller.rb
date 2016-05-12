@@ -1,5 +1,5 @@
 class AboutsController < ApplicationController
-  before_action :set_about, only: [:show, :edit, :update, :destroy]
+  before_action :set_about, only: [ :edit, :update, :destroy]
 
   # GET /abouts
   # GET /abouts.json
@@ -7,10 +7,7 @@ class AboutsController < ApplicationController
     @abouts = About.all
   end
 
-  # GET /abouts/1
-  # GET /abouts/1.json
-  def show
-  end
+ 
 
   # GET /abouts/new
   def new

@@ -1,3 +1,49 @@
 // Place all the styles related to the Abouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container-about_pad {
+	padding: 65px 50px 0px 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.block-about {
+	display: block;
+	text-align: center;
+	margin: 0px 10px 15px 10px;
+	width: 100%;
+	border-radius: 5px;
+	min-height: 300px;
+	
+	background: #FFFFFF;
+	box-shadow: 2px 1px 15px rgba(0,0,0,0.25);
+}
+.block-about-icon {
+	border-radius: 500px;
+	overflow: hidden;
+	margin: 30px 15px 15px 30px;
+	background: #ffff66;
+	float: left;
+	width: 250px;
+	height: 250px;
+}	
+.block-about-icon img {
+	width:  250px;
+	height: 250px;
+}
+.block-text-about_pad {
+	position: relative;
+	text-align: left;
+	padding: 15px 0px 0px 300px;
+}
+.block-text-about_pad h2 {
+	font-size: 200%;
+	font-weight:300;
+	text-align: center;
+}
+.block-text-about_pad p {
+	font-size: 120%;
+	text-align:left;
+}

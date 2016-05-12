@@ -1,0 +1,28 @@
+<div class="wrapper">
+    
+<h1 id="welcome_h1">Some Information About Us</h1>
+<div class="container-about">
+  <div class="container-about_pad">
+
+     <% @abouts.each do |about| %>
+      <div class="block-about">
+        <div class="block-about-icon">
+          <%= image_tag about.avatar.url(:main) %>
+        </div>
+      <div class="block-text-about_pad">
+         <h1> <%= about.name %> </h1>
+        <p> <%= markdown about.biography %> </p>
+        <% if user_signed_in? %>
+        <%= link_to 'Show', about , :class => "button" %>
+        <%= link_to 'Edit', edit_about_path(about) , :class => "button"  %>
+        <%= link_to 'Destroy', about, :method => :delete, :data => { :confirm => 'Are you sure?' }   , :class => "button delete_button"%>
+        <% end %>
+      </div>
+    </div>
+        <% end %>
+<% if user_signed_in? %>
+<p><%= link_to ' New About', new_about_path  , :class => "button"%></p>
+<% end %>
+</div>
+</div>
+</div>

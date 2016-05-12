@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507220107042868) do
+ActiveRecord::Schema.define(version: 20160512074817) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -108,38 +108,6 @@ ActiveRecord::Schema.define(version: 20160507220107042868) do
     t.datetime "view_updated_at"
   end
 
-  create_table "translation_center_categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "translation_center_translation_keys", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "category_id"
-    t.datetime "last_accessed"
-    t.string   "en_status",     default: "untranslated"
-    t.string   "ua_status",     default: "untranslated"
-    t.string   "ru_status",     default: "untranslated"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "translation_center_translation_keys", ["name"], name: "index_translation_center_translation_keys_on_name"
-
-  create_table "translation_center_translations", force: :cascade do |t|
-    t.integer  "translation_key_id"
-    t.text     "value"
-    t.string   "lang"
-    t.integer  "translator_id"
-    t.string   "translator_type"
-    t.string   "status",             default: "pending"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "translation_center_translations", ["translation_key_id"], name: "index_translation_center_translations_on_translation_key_id"
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -153,16 +121,13 @@ ActiveRecord::Schema.define(version: 20160507220107042868) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.text     "biography"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["name"], name: "index_users_on_name", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "votes", force: :cascade do |t|

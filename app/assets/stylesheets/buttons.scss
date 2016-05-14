@@ -49,9 +49,32 @@ input[type="submit"] , .button
 	background: #FFF;
 	border: 2px solid $dark;
 	color: $dark;
+	transition-duration: 0.3s;
 	&:hover {
 		color: #FFF;
 		background: $dark;
+	}
+}
+#button_back {
+	padding: 15px;
+	background: #FFF;
+	border: 2px solid $dark;
+	color: $dark;
+	transition-duration: 0.3s;
+	&:hover {
+		color: #FFF;
+		background: $dis-dark;
+	}
+}
+#button_send_message {
+	padding: 15px;
+	background: #FFF;
+	border: 2px solid black;
+	color: black;
+	transition-duration: 0.3s;
+	&:hover {
+		color: white;
+		background: #4CAF50;
 	}
 }
 
